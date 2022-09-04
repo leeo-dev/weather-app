@@ -1,6 +1,5 @@
-const request = require('postman-request')
 const geocode = require('./utils/geolocation')
-const urlWeatherStack = 'http://api.weatherstack.com/current?access_key=0cdb284a1cb5db2efb8e5dca2726f654&query=-6.3281,-47.4218'
+const forecast = require('./utils/forecast')
 // request(urlWeatherStack, (error, response, body) => {
 //   try {
 //     const data = JSON.parse(body)
@@ -14,4 +13,7 @@ const urlWeatherStack = 'http://api.weatherstack.com/current?access_key=0cdb284a
 geocode('Tocantinópolis', (error, data) => {
   if(error) return console.log(error)
   console.log('Data: ', data)
+  forecast({latitude: data.latitude, longitude: data.longitude}, (error, data) => {
+    console.log(data)
+  } )
 })
