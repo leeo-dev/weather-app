@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon . -e js,hbs"
+
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   },
   "homepage": "https://github.com/leeo-dev/weather-app#readme",
   "dependencies": {
-    "postman-request": "^2.88.1-postman.31"
+    "postman-request": "^2.88.1-postman.31",
+    "express": "^4.18.1",
+    "hbs": "^4.2.0"
+
   }
 }
