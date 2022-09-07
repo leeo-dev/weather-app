@@ -1,4 +1,5 @@
-const {Router, application} = require('express')
+const {Router} = require('express')
+const {getCurrentWeather} = require('./get-weather')
 const router = Router()
 router.get('/', (request, response) => {
   response.render('index', {
@@ -8,9 +9,10 @@ router.get('/', (request, response) => {
   })
 })
 
-router.get('/weather', (request, response) => {
+router.get('/weather', async (request, response) => {
   console.log(request.query)
   if(!request.query?.address) return response.json({error: "You must provide and address!"})
-  response.json(request.query)
+  const weather = await getCurrentWeather(request.query?.address)
+  return response.json(weather)
 })
 module.exports = router
