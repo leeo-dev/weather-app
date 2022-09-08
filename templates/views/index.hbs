@@ -1,3 +1,29 @@
   {{>header}}
-  <p>name: {{name}}</p>
+    <main>
+    <h1 class="title">Weather App</h1>
+    <div class="card">
+      <div class="card-header">
+        <span class="city">Tocantinópolis</span>
+        <span class="hours">22:34</span>
+      </div>
+      <div class="card-info">
+        <img src="./img/moon-stars.svg" alt="" class="icon-weather">
+        <span class="forecast">Partly Cloud</span>
+      </div>
+      <div class="info-footer">
+        <div class="info-weather">
+          <ul>
+            <li>3 km/h</li>
+            <li>5%</li>
+            <li>0.5h</li>
+          </ul>
+        </div>
+        <p class="temperature">38°</p>
+      </div>
+    </div>
+    <form id="search">
+      <input type="text" name="address" id="search-address">
+      <input type="submit" id="search-button" value="Search">
+    </form>
+  </main>
   {{>footer}}

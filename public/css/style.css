@@ -1,3 +1,116 @@
+*, *::after, *::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
-  background-color: #444;
+  background: #05151E;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D3E4ED;
+}
+
+.title {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.card {
+  background: #0C2634;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.card-header .city {
+  background-color: #123141;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.card-info img{
+  width: 100px;
+  margin-bottom: 25px;
+}
+
+.forecast {
+  color: #808E95;
+  font-weight: 600;
+}
+
+.info-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-footer li {
+  margin-bottom: 9px;
+}
+
+.temperature {
+  font-size: 64px;
+  font-weight: 300;
+}
+
+#search {
+  margin-top: 18px;
+}
+
+#search #search-address {
+  background: transparent;
+  border: solid 1px #2D3F48;
+  font-size: 15px;
+  padding: 12px 15px;
+  border-radius: 7px;
+  color: #D3E4ED;
+  margin-right: 9px;
+}
+
+#search-address:focus {
+  outline: 1px solid #2D3F48;
+}
+
+#search #search-button {
+  border: none;
+  font-size: 15px;
+  padding: 12px 15px;
+  color: #D3E4ED;
+  background: #0C2634;
+  border-radius: 7px;
+  cursor: pointer;
 }
